@@ -51,10 +51,6 @@ jobs:
     - name: Build via Maven
       run: mvn verify -B --file pom.xml -DdisableXmlReport=true
       
-#    - name: Set version in pom.xml to 23.0
-#        run: |
-#          sed -i '0,/<version>.*<\/version>/s//<version>23.0<\/version>/' pom.xml
-
       - name: Build with branch override
         run: mvn package --file pom.xml -Dproject.branch=master
 
