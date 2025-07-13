@@ -50,7 +50,7 @@ jobs:
     # 4. Build via Maven
     - name: Build via Maven
       run: mvn verify -B --file pom.xml -DdisableXmlReport=true
-      
+
     - name: Build with branch override
       run: mvn package --file pom.xml -Dproject.branch=master
 
